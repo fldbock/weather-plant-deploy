@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  install:
+    cmds:
+      - helm upgrade --install -f '{{.USER_WORKING_DIR}}'/Values.yml weather-plants-helm $PROJECT_ROOT/helm/
+    silent: true
