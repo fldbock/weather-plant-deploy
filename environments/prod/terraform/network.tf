@@ -10,12 +10,14 @@ resource "aws_subnet" "public-eu-west-1a" {
     vpc_id = aws_vpc.main.id
     cidr_block = "10.0.0.0/18"
     availability_zone = "eu-west-1a"
+    map_public_ip_on_launch = true
 }
 
 resource "aws_subnet" "public-eu-west-1b" {
     vpc_id = aws_vpc.main.id
     cidr_block = "10.0.64.0/18"
     availability_zone = "eu-west-1b"
+    map_public_ip_on_launch = true
 }
 
 resource "aws_route_table" "public" {
