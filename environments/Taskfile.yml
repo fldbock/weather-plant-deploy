@@ -9,3 +9,7 @@ tasks:
     cmds:
       - helm uninstall weather-plants-helm
     silent: true
+  kubefwd:
+    cmds:
+      - sudo -E kubefwd services
+    silent: true

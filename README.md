@@ -1,5 +1,6 @@
 # Weather Plants Deployment Repo
 ## Deploy to Kubernetes using Helm
+### local
 
 Make sure minikube and kubectl are installed on your machine. Go to a subfolder of *environments/* and execute:
 
@@ -8,6 +9,21 @@ Make sure minikube and kubectl are installed on your machine. Go to a subfolder 
 
 The output of your last command will show you how access the application.
 
+### prod (EKS)
+
+Add your aws credentials to *.envrc* file:
+
+    export AWS_ACCESS_KEY_ID=""
+    export AWS_SECRET_ACCESS_KEY=""
+
+Go to *environments/prod/terraform* and execute:
+
+    terraform apply
+    task install
+
+The first command will spin up an EKS cluster and the prerequisite infrastructure. Don't forget to delete this infrastructure afterwards because it's expensive.
+
+    terraform apply
 ## Querying The API Examples
 
 Read list of plants:
