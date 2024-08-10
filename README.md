@@ -10,15 +10,9 @@ Create a REST API in Python to manage plants and query weather conditions for ea
 * Package your application as a docker image (ie provide a dockerfile, not the image itself)
 * Create a helm chart to deploy you application on a kubernetes cluster
 
-## Tech Stack
-We use:
-* Python3.8
-* Flask3.0.3
-* SQLalchemy
-* SQLite
-* Docker
-* Kubernetes
-* Helm
+After finishing this initial project I added new requirements to implement more devops tools and techniques:
+* App should be deployed both locally and on the cloud (prod)
+* Database must be persistent and handle production loads
 
 ## Deploy to Kubernetes using Helm
 
