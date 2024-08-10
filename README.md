@@ -4,7 +4,7 @@
 Make sure minikube and kubectl are installed on your machine. Now you can start a minikube cluster where you can install your helm file.
 
     minikube start
-    helm install -f weather-plants-helm/values.yaml weather-plants-helm ./weather-plants-helm/
+    task install
 
 The output of your last command will give you new commands you should run to set up port forwarding and access the application.
 
