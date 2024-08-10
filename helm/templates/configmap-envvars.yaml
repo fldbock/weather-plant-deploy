@@ -1,9 +1,9 @@
-{{ if .Values.wp.envvars }}
+{{ if .Values.api.envvars }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: envvars
 data:
   .env: |
-{{ .Values.wp.envvars | indent 4 }}
+{{ .Values.api.envvars | indent 4 }}
 {{ end }}
