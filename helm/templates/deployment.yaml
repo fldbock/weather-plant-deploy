@@ -31,6 +31,11 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
+          command:
+            - "/bin/sh"
+            - "-c"
+          args:
+            - "./entrypoint.sh"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
@@ -41,7 +46,8 @@ spec:
               protocol: TCP
           volumeMounts:
           - name: envvars
-            mountPath: /etc/config
+            mountPath: /weather-plants-docker/app/.env
+            subPath: .env
       volumes:
         - name: envvars
           configMap:

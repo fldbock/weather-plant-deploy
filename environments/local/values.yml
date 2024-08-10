@@ -1,0 +1,3 @@
+wp:
+   envvars: |-
+      SQLALCHEMY_DATABASE_URI='sqlite:///./local_database.db'
