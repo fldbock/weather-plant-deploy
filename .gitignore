@@ -1,3 +1,6 @@
 **/__pycache__/
 notes.txt
-.vscode
+.vscode7
+.envrc
+.terraform/
+.terraform.lock.hcl
