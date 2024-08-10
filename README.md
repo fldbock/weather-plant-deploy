@@ -1,12 +1,12 @@
 # Weather Plants Deployment Repo
 ## Deploy to Kubernetes using Helm
 
-Make sure minikube and kubectl are installed on your machine. Now you can start a minikube cluster where you can install your helm file.
+Make sure minikube and kubectl are installed on your machine. Go to a subfolder of *environments/* and execute:
 
     minikube start
     task install
 
-The output of your last command will give you new commands you should run to set up port forwarding and access the application.
+The output of your last command will show you how access the application.
 
 ## Querying The API Examples
 
